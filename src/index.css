@@ -1,0 +1,562 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color-scheme: light;
+  background-color: #f8fafc;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Institucional */
+.app-header {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo {
+  background-color: #008060;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.header-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.header-link:hover {
+  color: #fff;
+}
+
+/* Contenedor Principal */
+.main-container {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.section-subtitle {
+  color: #008060;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.main-description {
+  color: #475569;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Tarjeta de Control / Formulario */
+.card-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+}
+
+.card-box h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.card-box p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Controles de Formulario */
+.form-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 220px;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #008060;
+  box-shadow: 0 0 0 3px rgba(0, 128, 96, 0.1);
+}
+
+.btn-primary {
+  background-color: #008060;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 42px;
+}
+
+.btn-primary:hover {
+  background-color: #00664d;
+}
+
+/* Listado y Tarjetas de Criptomonedas */
+.crypto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.crypto-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.crypto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+.crypto-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.crypto-card-header img {
+  width: 36px;
+  height: 36px;
+}
+
+.crypto-card-header h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0f172a;
+}
+
+.crypto-card-header span {
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+}
+
+.crypto-details p {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.crypto-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.btn-secondary {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #e2e8f0;
+}
+
+.link-detail {
+  color: #008060;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+.link-detail:hover {
+  text-decoration: underline;
+}
+
+/* Footer Institucional */
+.app-footer {
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.app-footer a {
+  color: #008060;
+  text-decoration: none;
+}
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1rem;
+  }
+  .main-title {
+    font-size: 1.75rem;
+  }
+  .app-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Pantallas principales */
+.container {
+  width: min(100% - 2rem, 1000px);
+  margin-inline: auto;
+}
+
+.main-content {
+  flex: 1;
+  padding-block: 3rem 4rem;
+}
+
+.hero-section,
+.intro {
+  margin-bottom: 2rem;
+}
+
+.hero-section h1,
+.intro h1 {
+  max-width: 760px;
+  margin: 0.25rem 0 0.75rem;
+  color: #0f172a;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.hero-section > p:last-child,
+.intro > p:last-child {
+  max-width: 680px;
+  color: #475569;
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #008060;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+/* Consulta y validación */
+.query-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) minmax(210px, 1fr) auto auto;
+  gap: 1rem;
+  align-items: end;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-group input[type='text'],
+.form-group select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font: inherit;
+}
+
+.checkbox-label {
+  min-height: 44px;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.55rem !important;
+  white-space: nowrap;
+}
+
+.checkbox-label input {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #008060;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  border: 1px solid #008060;
+  background: #008060;
+  color: #fff;
+}
+
+.primary-button:hover {
+  border-color: #00664d;
+  background: #00664d;
+}
+
+.secondary-button {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+}
+
+.secondary-button:hover {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.field-error,
+.error-message {
+  color: #b91c1c;
+}
+
+.field-error {
+  grid-column: 1 / -1;
+  margin: -0.75rem 0 0;
+  font-size: 0.85rem;
+}
+
+.results-section > [role='status'],
+.results-section > [role='alert'] {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background: #f1f5f9;
+}
+
+/* Contenido de tarjetas */
+.crypto-card-header {
+  justify-content: space-between;
+}
+
+.crypto-name {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.crypto-ticker,
+.crypto-price-label {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 50%;
+  background: #ecfdf5;
+  color: #008060;
+  font-weight: 800;
+}
+
+.crypto-price-label {
+  margin: 0;
+}
+
+.crypto-price {
+  margin: 0.25rem 0 1rem;
+  color: #0f172a;
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.detail-card,
+.status-card {
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.detail-list div {
+  padding: 1rem;
+  border-radius: 9px;
+  background: #f8fafc;
+}
+
+.detail-list dt {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.detail-list dd {
+  margin: 0.25rem 0 0;
+  color: #0f172a;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.back-link {
+  margin-top: 1rem;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(0, 128, 96, 0.3);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .header-link {
+    display: none;
+  }
+
+  .main-content {
+    padding-block: 2rem 3rem;
+  }
+
+  .query-panel,
+  .detail-list {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button {
+    width: 100%;
+  }
+}
