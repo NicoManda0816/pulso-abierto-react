@@ -55,7 +55,11 @@ El proyecto no necesita variables de entorno propias. La aplicación consulta di
 
 ## Aplicación publicada
 
-La URL pública de Vercel se agregará aquí al completar el despliegue.
+[Abrir Pulso Abierto en Vercel](https://pulso-abierto-react-phi.vercel.app/)
+
+Vercel despliega desde la rama `main` con el preset de Vite. El comando de
+compilación es `npm run build` y la carpeta de salida es `dist`. La configuración
+en `vercel.json` permite abrir o recargar directamente las rutas de detalle.
 
 ## Mejora de mantenibilidad
 
@@ -69,5 +73,7 @@ Para comprobar que no se produjeron regresiones se ejecutaron las pruebas automa
 - Lint ejecutado correctamente.
 - Build generado correctamente.
 - Preview comprobado en escritorio y a 390 px de ancho.
-- Despliegue: pendiente de completar en Vercel.
-- Fecha de verificación: 25 de noviembre de 2026.
+- Despliegue en Vercel realizado desde GitHub. En producción se verificaron la
+  consulta a CoinGecko, la navegación, la recarga directa del detalle, los
+  favoritos persistentes, el formulario y el diseño adaptable a 390 px.
+- Fecha de verificación: 26 de noviembre de 2026.
